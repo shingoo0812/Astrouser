@@ -7,6 +7,10 @@ return {
     spell = false, -- sets vim.opt.spell
     signcolumn = "auto", -- sets vim.opt.signcolumn to auto
     wrap = false, -- sets vim.opt.wrap
+    tabstop = 4,
+    shiftwidth = 4,
+    softtabstop = 4,
+    expandtab = false,
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
@@ -27,4 +31,9 @@ return {
 --   local_vim.opt.shortmess = vim.opt.shortmess + { I = true } -- add to option list
 --
 --   return local_vim
+
 -- end
+--
+--   function(local_vim)
+--     local_vim.g['sneak#label'] = 1
+--     return local_vim

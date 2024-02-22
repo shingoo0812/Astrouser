@@ -9,14 +9,14 @@ return {
     -- second key is the lefthand side of the map
 
     -- navigate buffer tabs with `H` and `L`
-    -- L = {
-    --   function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
-    --   desc = "Next buffer",
-    -- },
-    -- H = {
-    --   function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
-    --   desc = "Previous buffer",
-    -- },
+     L = {
+       function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
+       desc = "Next buffer",
+     },
+     H = {
+       function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
+       desc = "Previous buffer",
+     },
 
     -- mappings seen under group name "Buffer"
     ["<leader>bD"] = {
@@ -32,6 +32,20 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    
+    -- resize
+    ["<A-n>"] = { ":vertical resize +2<CR>" },
+    ["<A-m>"] = { ":vertical resize -2<CR>" },
+    ["<A-,>"] = { ":resize -2<CR>" },
+    ["<A-.>"] = { ":resize +2<CR>" },
+    ["<A-=>"] = { "<C-w>=", desc = "Resize equal" },
+    
+    -- split
+    ["<A-v>"] = { "<C-w>v", desc = "Split window vertically" },
+    ["<A-s>"] = { "<C-w>s", desc = "Split window horizontally" },
+    
+
+
   },
   t = {
     -- setting a mapping to false will disable it
