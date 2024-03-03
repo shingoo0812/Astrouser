@@ -35,4 +35,4 @@ return {
     "jesseduffield/lazygit",
     event = "VeryLazy",
   },
-} 
+}
