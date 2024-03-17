@@ -1,39 +1,31 @@
--- TODO: hoge
 return {
-  -- You can also add new plugins here as well:
-  -- Add plugins, the lazy syntax
-  -- "andweeb/presence.nvim",
-  -- {
-  --   "ray-x/lsp_signature.nvim",
-  --   event = "BufRead",
-  --   config = function()
-  --     require("lsp_signature").setup()
-  --   end,
-  -- },
   {
     "github/copilot.vim",
     lazy = false,
   },
   {
-    "kylechui/nvim-surround",
-    version = "*", -- Une for stability; omit to use `main` branch for the latest features
-    event = "VeryLazy",
-    config = function()
-        require("nvim-surround").setup({
-            -- Configuration here, or leave empty to use defaults
-        })
-    end
-  },
-  {
     "ggandor/leap.nvim",
+    "mg979/vim-visual-multi",
+    "jesseduffield/lazygit",
+    "kylechui/nvim-surround",
     event = "VeryLazy",
+  },
+  { "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 1000,
   },
   {
-    "mg979/vim-visual-multi",
-    event = "VeryLazy",
-  },
-   {
-    "jesseduffield/lazygit",
-    event = "VeryLazy",
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+--    config = function()
+--      require("todo-comments").setup()
+--    end,
+    opts = {},
+    event = "User AstroFile",
+    keys = {
+     { "<leader>T", "", desc = "TODO" },
+     { "<leader>Tl", "<cmd>TodoLocList<cr>", desc = "Open TODOLockList." },
+     { "<leader>Tt", "<cmd>TodoTelescope<cr>", desc = "Open TODO in Telescope." },
+    },
   },
 }
