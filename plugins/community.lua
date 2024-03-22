@@ -16,14 +16,13 @@ return {
   -- Motion
   { import = "astrocommunity.motion.leap-nvim" },
   { import = "astrocommunity.motion.mini-surround" },
-  -- Editing 
-  { import = "astrocommunity.editing-support.suda-vim"},
+  -- Editing
+  { import = "astrocommunity.editing-support.suda-vim" },
   -- Completion
-  { import  = "astrocommunity.completion.copilot-lua" },
+  -- { import  = "astrocommunity.completion.copilot-lua" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
   -- Syntax
   { import = "astrocommunity.syntax.vim-easy-align" },
   -- { import = ""}
   -- { import = "leap" },
-
 }
