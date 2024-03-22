@@ -1,27 +1,8 @@
 return {
   {
-    "github/copilot.vim",
-    lazy = false,
-  },
-  {
-    "ggandor/leap.nvim",
     "mg979/vim-visual-multi",
     "jesseduffield/lazygit",
     event = "VeryLazy",
-  },
-  {
-      "kylechui/nvim-surround",
-      version = "*", -- Use for stability; omit to use `main` branch for the latest features
-      event = "VeryLazy",
-      config = function()
-          require("nvim-surround").setup({
-              -- Configuration here, or leave empty to use defaults
-          })
-      end
-  },
-  { "catppuccin/nvim",
-    name = "catppuccin",
-    priority = 1000,
   },
   {
     "folke/todo-comments.nvim",
@@ -37,4 +18,19 @@ return {
      { "<leader>Tt", "<cmd>TodoTelescope<cr>", desc = "Open TODO in Telescope." },
     },
   },
+  {
+      "zbirenbaum/copilot.lua",
+      cmd = "Copilot",
+      event = "InsertEnter",
+      config = function()
+          require("copilot").setup({})
+      end,
+  },
+  {
+      "zbirenbaum/copilot-cmp",
+      config = function()
+          require("copilot_cmp").setup()
+      end
+  },
+
 }
